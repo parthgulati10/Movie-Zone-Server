@@ -47,10 +47,10 @@ mongoose.connect('mongodb+srv://parth123:parth123@cluster0.yjojy.mongodb.net/Dir
 
 
 
-app.use('/graphql', graphqlHTTP({
-    schema,
-    graphiql:true
-}));
+// app.use('/graphql', graphqlHTTP({
+//     schema,
+//     graphiql:true
+// }));
 
 
 const port = process.env.Port || 4000;
