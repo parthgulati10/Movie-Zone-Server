@@ -17,6 +17,7 @@ app.use(cors());
 //   console.log('Connect to Db! Hurray!!')
 //   client.close();
 // });
+const PORT = process.env.PORT || 5000;
 mongoose.connect('mongodb+srv://parth123:parth123@cluster0.yjojy.mongodb.net/Director?retryWrites=true&w=majority' , {
 	useNewUrlParser: true,
 	useCreateIndex: true,
@@ -24,6 +25,7 @@ mongoose.connect('mongodb+srv://parth123:parth123@cluster0.yjojy.mongodb.net/Dir
 })
 .then(()=> {
 	console.log("Connected to DB! Hurray");
+	//return server.listen({port: PORT});
 }).catch(err => {
 	console.log("ERROR:", err.message);
 })
@@ -53,7 +55,7 @@ app.use('/', graphqlHTTP({
 }));
 
 
-const port = process.env.Port || 4000;
-app.listen(port, ()=>{
-  console.log('Now listening to Request on the chosen '+{port});
+//const port = process.env.Port || 4000;
+app.listen(PORT, ()=>{
+  console.log(`Now listening to Request on the chosen ${PORT}`);
 })
