@@ -17,16 +17,16 @@ const app = express();
 //   console.log('Connect to Db! Hurray!!')
 //   client.close();
 // });
-mongoose.connect('mongodb+srv://parth123:parth123@cluster0.yjojy.mongodb.net/Director?retryWrites=true&w=majority' , {
-	useNewUrlParser: true,
-	useCreateIndex: true,
-  useUnifiedTopology: true
-})
-.then(()=> {
-	console.log("Connected to DB! Hurray");
-}).catch(err => {
-	console.log("ERROR:", err.message);
-})
+// mongoose.connect('mongodb+srv://parth123:parth123@cluster0.yjojy.mongodb.net/Director?retryWrites=true&w=majority' , {
+// 	useNewUrlParser: true,
+// 	useCreateIndex: true,
+//   useUnifiedTopology: true
+// })
+// .then(()=> {
+// 	console.log("Connected to DB! Hurray");
+// }).catch(err => {
+// 	console.log("ERROR:", err.message);
+// })
 
 // mongoose.connect('mongodb+srv://parth123:parth123@cluster0.yjojy.mongodb.net/test?retryWrites=true&w=majority');
 // mongoose.connection.once('open', ()=>{
