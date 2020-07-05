@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 
 const app = express();
-//app.use(cors());
+app.use(cors());
 
 
 // const MongoClient = require('mongodb').MongoClient;
@@ -47,10 +47,10 @@ const app = express();
 
 
 
-// app.use('/graphql', graphqlHTTP({
-//     schema,
-//     graphiql:true
-// }));
+app.use('/', graphqlHTTP({
+    schema,
+    graphiql:true
+}));
 
 
 const port = process.env.Port || 4000;
