@@ -18,7 +18,8 @@ app.use(cors());
 //   client.close();
 // });
 const PORT = process.env.PORT || 5000;
-mongoose.connect('mongodb+srv://parth123:parth123@cluster0.yjojy.mongodb.net/Director?retryWrites=true&w=majority' , {
+const databaseUri = process.env.MONGODB_URI;
+mongoose.connect(databaseUri , {
 	useNewUrlParser: true,
 	useCreateIndex: true,
   useUnifiedTopology: true
