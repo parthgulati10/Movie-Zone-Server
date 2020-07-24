@@ -8,15 +8,7 @@ const app = express();
 app.use(cors());
 
 
-// const MongoClient = require('mongodb').MongoClient;
-// const uri = "mongodb+srv://parth123:parth123@cluster0.yjojy.mongodb.net/test?retryWrites=true&w=majority";
-// const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-// client.connect(err => {
-//   const collection = client.db("test").collection("devices");
-//   // perform actions on the collection object
-//   console.log('Connect to Db! Hurray!!')
-//   client.close();
-// });
+
 const PORT = process.env.PORT || 5000;
 const databaseUri = process.env.MONGODB_URI;
 mongoose.connect(databaseUri , {
@@ -30,22 +22,6 @@ mongoose.connect(databaseUri , {
 }).catch(err => {
 	console.log("ERROR:", err.message);
 })
-
-// mongoose.connect('mongodb+srv://parth123:parth123@cluster0.yjojy.mongodb.net/test?retryWrites=true&w=majority');
-// mongoose.connection.once('open', ()=>{
-//   console.log('connect to database');
-// })
-//
-//
-//
-// const MongoClient = require('mongodb').MongoClient;
-// const uri = "mongodb+srv://parth123:parth123@cluster0.yjojy.mongodb.net/test?retryWrites=true&w=majority";
-// const client = new MongoClient(uri, { useNewUrlParser: true });
-// client.connect(err => {
-//   const collection = client.db("test").collection("devices");
-//   // perform actions on the collection object
-//   client.close();
-// });
 
 
 
